@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <!-- Importing the Inter font from Google Fonts -->
@@ -6,19 +6,26 @@
 
 <style>
 #text-container {
-  width: 600px;
+  width: 650px;
   margin: 0 auto;
-  font-size: 60px;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 800;
   font-family: 'Inter', sans-serif;
 }
-
+#text-container span:nth-child(1){
+  background:white;
+}
 .gradient-text-segment {
   position: relative;
-  display: inline-block;
+
   word-wrap: break-word;
   margin-right: 4px;
   font-family: 'Inter', sans-serif;
+}
+
+@keyframes backgroundImageAnimation {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
 }
 
 .gradient-text-segment::before {
@@ -32,7 +39,7 @@
   background-image: url('https://pbs.twimg.com/media/FmeKpEoWYAEhEl8?format=jpg&name=4096x4096');
   background-size: cover;
   background-position: center;
- 
+  animation: backgroundImageAnimation 20s linear infinite; /* Applying the animation */
 }
 
 .gradient-text-segment::after {
@@ -42,19 +49,21 @@
   left: 0;
   right: 0;
   bottom: 0;
-     z-index: -1;
-    background: linear-gradient(to right, #0000ff94, #20209b85), url(https://grainy-gradients.vercel.app/noise.svg);
-    background-size: cover;
-    filter: contrast(170%) brightness(1000%);
-    opacity: .8;/* Adjust opacity as needed */
+  z-index: -1;
+  background: linear-gradient(to right, #0000ff94, #20209b85), url('https://grainy-gradients.vercel.app/noise.svg');
+  background-size: cover;
+  filter: contrast(170%) brightness(1000%);
+  opacity: .8;
 }
 </style>
 </head>
 <body>
 
 <div id="text-container">
-  so saturation playscale is from 85% to 100% and the luminance goes from 55% to 75% asdasd adasd asd asd asd as asdas dasd asd asd asdas dad as
-</div>
+ product/branding/multi design for uber lyft pepsi rejuvenation-chamber bakingsoda-gel airbnb flying-machine
+</div> <p>
+Product Design, blending aesthetic functionality, Product Strategy, guiding development, Branding, sculpting identities. Creative Direction drives innovation, with Prototyping, Web Design, and User Research enhancing interactions. Design Systems and Print Media Design unify and impact.
+</p>
 
 <script>
 function applyGradientToText(containerId) {
@@ -75,4 +84,4 @@ function applyGradientToText(containerId) {
 applyGradientToText("text-container");
 </script>
 </body>
-</html>
+</html> 
